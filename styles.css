@@ -66,3 +66,9 @@ section.criaTask h1 {
     font-size: 2.25rem;
     font-weight: 600;
 }
+
+section.criaTask .input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
