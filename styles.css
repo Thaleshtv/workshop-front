@@ -82,3 +82,12 @@ section.criaTask .input-group input{
     border: 0;
     border-radius: 0.25rem;
 }
+
+section.criaTask .input-group button{
+    color: var(--shape);
+    padding: 0.65rem;
+    background: var(--green);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
