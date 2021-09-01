@@ -1,1 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --background: #F0F2F5;
+    --red: #E62E4D;
+    --blue: #5429CC;
+    --green: #33CC95;
+    --blue-light: #6933FF;
+    --text-title: #363F5F;
+    --text-body: #969CB3;
+    --shape: #FFFFFF;
+}
