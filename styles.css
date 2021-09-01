@@ -72,3 +72,13 @@ section.criaTask .input-group {
     align-items: center;
     gap: 0.25rem;
 }
+
+section.criaTask .input-group input{
+    background: var(--shape);
+    color: var(--text-body);
+    font-family: "Poppins";
+    font-weight: 500;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+}
