@@ -42,7 +42,9 @@
             .then(data => {
                 for(i=0; i < data.tasks.length; i++) {
                     const nameTask = data.tasks[i].name
-                }
+
+                    const seeTaksLi = document.createElement('li')
+                    seeTasksUl.appendChild(seeTaksLi)                }
             })
             
     }
