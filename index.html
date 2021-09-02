@@ -40,7 +40,9 @@
         fetch('https://mytod0list-api.herokuapp.com/src/controllers/list-tasks.php')
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                for(i=0; i < data.tasks.length; i++) {
+                
+                }
             })
             
     }
