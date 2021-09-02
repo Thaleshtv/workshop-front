@@ -63,6 +63,7 @@ section.criaTask header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 section.criaTask h1 {
