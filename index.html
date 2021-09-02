@@ -37,8 +37,14 @@
     seeTasksDiv.appendChild(seeTasksUl)
     
     function getTasks() {
-        
+        fetch('https://mytod0list-api.herokuapp.com/src/controllers/list-tasks.php')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+            
     }
+    getTasks()
 
 </script>
 </html>
