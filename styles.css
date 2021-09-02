@@ -25,6 +25,10 @@ button {
     cursor: pointer;
 }
 
+ul {
+    list-style: none;
+}
+
 .container {
     max-width: 1120px;
     margin: 0 auto;
@@ -90,4 +94,14 @@ section.criaTask .input-group button{
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
+}
+
+section.criaTask .seeTasksDiv ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 0.75rem;
+    color: var(--shape);
+    font-weight: 400;
 }
