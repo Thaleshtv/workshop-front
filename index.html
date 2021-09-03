@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>My tasks</title>
 </head>
 <body>
@@ -45,7 +46,20 @@
 
                     const seeTasksLi = document.createElement('li')
                     seeTasksLi.innerText = nameTask
-                    seeTasksUl.appendChild(seeTasksLi)                }
+                    seeTasksUl.appendChild(seeTasksLi)
+                    
+                    const deleteTaskButton = document.createElement('button')
+                    deleteTaskButton.style.background = 'transparent'
+                    deleteTaskButton.style.border = 'none'
+                    seeTasksLi.appendChild(deleteTaskButton)
+                    
+                    const iconDeleteTask = document.createElement('i')
+                    iconDeleteTask.classList.add('far')
+                    iconDeleteTask.classList.add('fa-trash-alt')
+                    iconDeleteTask.style.color = 'white'
+                    iconDeleteTask.style.fontSize = '1rem'
+                    deleteTaskButton.appendChild(iconDeleteTask)
+                }
             })
             
     }
