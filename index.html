@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
                 <h1>Minhas tasks</h1>
                 <div class="input-group">
                     <input type="text" placeholder="Adicionar nova task" id="novaTask">
-                    <button >
+                    <button onclick=postTasks() >
                         Enviar
                     </button>
                 </div>
@@ -36,6 +36,24 @@
 
     const seeTasksUl = document.createElement('ul')
     seeTasksDiv.appendChild(seeTasksUl)
+
+    function postTasks()  {
+        let nameInput = document.querySelector('#novaTask').value
+
+        const body = new FormData();
+        body.append("name", nameInput);
+        body.append("description", '');
+        
+        fetch('https://mytod0list-api.herokuapp.com/src/controllers/add-task.php', { method: 'POST', body })
+            .then(response => response.json())
+            .then(data => {
+                window.alert(data.message)
+                if(data.success === true) {
+                    atualizarTasks()
+                } 
+            })
+
+    }
     
     function getTasks() {
         fetch('https://mytod0list-api.herokuapp.com/src/controllers/list-tasks.php')
@@ -43,7 +61,7 @@
             .then(data => {
                 for(i=0; i < data.tasks.length; i++) {
                     const nameTask = data.tasks[i].name
-
+                    
                     const seeTasksLi = document.createElement('li')
                     seeTasksLi.innerText = nameTask
                     seeTasksUl.appendChild(seeTasksLi)
@@ -64,6 +82,5 @@
             
     }
     getTasks()
-
 </script>
 </html>
