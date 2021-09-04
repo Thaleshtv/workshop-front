@@ -37,6 +37,15 @@
     const seeTasksUl = document.createElement('ul')
     seeTasksDiv.appendChild(seeTasksUl)
 
+    function clearTasksUl() {
+        seeTasksUl.innerHTML = ''
+    }
+
+    function atualizarTasks() {
+        clearTasksUl()
+        getTasks()
+    }  
+
     function postTasks()  {
         let nameInput = document.querySelector('#novaTask').value
 
@@ -61,7 +70,7 @@
             .then(data => {
                 for(i=0; i < data.tasks.length; i++) {
                     const nameTask = data.tasks[i].name
-                    
+
                     const seeTasksLi = document.createElement('li')
                     seeTasksLi.innerText = nameTask
                     seeTasksUl.appendChild(seeTasksLi)
