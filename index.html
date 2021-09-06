@@ -46,6 +46,14 @@
         getTasks()
     }  
 
+    function deleteAllTasks() {
+        fetch('https://mytod0list-api.herokuapp.com/src/controllers/delete-all-tasks.php', {method: 'POST'})
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+    }
+
     function postTasks()  {
         let nameInput = document.querySelector('#novaTask').value
 
@@ -56,10 +64,8 @@
         fetch('https://mytod0list-api.herokuapp.com/src/controllers/add-task.php', { method: 'POST', body })
             .then(response => response.json())
             .then(data => {
-                window.alert(data.message)
-                if(data.success === true) {
-                    atualizarTasks()
-                } 
+                atualizarTasks()
+                document.querySelector('#novaTask').value = ''
             })
 
     }
